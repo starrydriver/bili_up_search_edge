@@ -4,20 +4,22 @@
 	"version": "1.0",
 	"description": "在动态发布界面添加UP主搜索功能",
 	"icons": {
-		"12": "icons/icon12.png",
-		"32": "icons/icon32.png",
-		"48": "icons/icon48.png",
-		"128": "icons/icon128.png"
+	  "12": "icons/icon12.png",
+	  "32": "icons/icon32.png",
+	  "48": "icons/icon48.png",
+	  "128": "icons/icon128.png"
 	},
-	"permissions": ["storage", "activeTab","scripting"],
+	"permissions": ["storage", "activeTab", "scripting"],
 	"action": {
-    "default_popup": "popup/popup.html"
-  	},
-	"content_scripts": [{
-			"matches":["<all_urls>"],
-      		"js": ["content-scripts/content.js"]
-	}],
+	  "default_popup": "popup/popup.html"
+	},
+	"content_scripts": [
+	  {
+		"matches": ["<all_urls>"],
+		"js": ["content-scripts/content.js"]
+	  }
+	],
 	"background": {
-    "service_worker": "background.js"
+	  "service_worker": "background.js"
 	}
-}
+  }
